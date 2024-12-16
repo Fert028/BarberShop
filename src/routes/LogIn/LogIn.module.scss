@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  padding-top: $header-height;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+.scissors, .pamazok {
+  position: absolute;
+  width: 30svw;
+  top: 20svh;
+}
+.scissors {
+  left: 10svw;
+}
+.pamazok {
+  right: 5svw;
+}
+.form {
+  width: 30svw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.input {
+  padding: 1rem;
+  border: 1px solid $color-grey;
+}
+.button {
+  padding: 1rem;
+  background-color: $color-accent;
+  cursor: pointer;
+}
+

@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+@mixin Button($bg: $color-grey, $color: $color-white) {
+  width: min-content;
+  height: min-content;
+  padding: calc($index * .3) calc($index * .8);
+  box-shadow: $shadow;
+  background-color: $bg;
+  color: $color;
+  &:hover {
+    background-color: rgba($bg, 0.5);
+  }
+}
+

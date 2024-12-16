@@ -1,0 +1,61 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  padding-top: $header-height;
+  width: $width; 
+  height: 80svh;
+  background: url("/assets/images/bg1.png") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__content {
+  width: 50svw;
+  padding: calc($index * 2);
+  background-color: rgba(black, .4);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+  box-shadow: $shadow;
+}
+.header__content__hero {
+  font-size: calc($index * 1.5);
+  font-weight: 500;
+  .link {
+    font-weight: 700;
+    color: $color-accent;
+  } 
+}
+.sign {
+  @include Button($color-accent);
+}
+.history {
+  position: relative;
+  padding-block: calc($index * 3);
+  background-color: $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &:last-child {
+    background-color: transparent;
+  }
+}
+.history__content {
+  width: 40svw;
+  text-align: center;
+  h1 {
+    font-size: calc($index * 2);
+  }
+}
+.barberImg {
+  position: absolute;
+  top: calc($index * 2);
+  right: calc($index * 3);
+  width: calc($index * 10);
+}
+
+

@@ -1,0 +1,73 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden; 
+}
+body {
+  font-family: inter, system-ui, avenir, helvetica, arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: calc($index * .8);
+  background-color: $color-basic;
+  color: $color-white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+  transition: $transition;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: $transition;
+}
+input {
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: text;
+  background-color: $color-grey;
+  &:focus-within {
+    background-color: $color-white;
+    color: black;
+  }
+}
+
+.navButton {
+  user-select: none;
+  color: $color-white;
+  transition: $transition;
+  &:hover {
+    color: $color-accent;
+  }
+}
+.navButton.active {
+  text-decoration: underline;
+  color: $color-accent;
+  pointer-events: none;
+}
+

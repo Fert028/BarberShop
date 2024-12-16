@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.container {
+  padding-top: $header-height; 
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  width: 100%;
+  padding: calc($index * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc($index * 2);
+}
+.content__header {
+  text-align: center;
+  h1 {
+    color: $color-accent;
+  }
+  p {
+    color: $color-grey;
+  }
+}
+.content__prices ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc($index * 1);
+}
+.image {
+  width: 40svw;
+  height: 92svh;
+  object-fit: cover;
+}
+

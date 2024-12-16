@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.container {
+  padding-top: $header-height;
+  display: flex;
+}
+.image {
+  width: 50svw;
+  height: 92svh;
+  object-fit: cover;
+}
+.content {
+  padding-top: calc($index * 2);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: calc($index * 1.5);
+  h1 {
+    color: $color-accent;
+    font-size: calc($index * 1.5);
+  }
+  h2 {
+    color: $color-grey;
+  }
+  section {
+    width: 20svw;
+    display: flex;
+    flex-direction: column;
+    gap: calc($index * 1.5);
+  }
+}
+.content__adress {
+  padding-bottom: calc($index * 1.5);
+  border-bottom: 1px solid $color-grey;
+}
+
