@@ -1,11 +1,15 @@
 import s from "./Home.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import barber from "/assets/images/barber.png";
+import logo from "/assets/icons/logo.svg";
 
 export const Home = () => {
   return (
     <div className={s.container}>
       <div className={s.header}>
+        <Link to="/" className={s.logo__wrapper}>
+          <img src={logo} className={s.logo} />
+        </Link>
         <section className={s.header__content}>
           <h1 className={s.header__content__hero}>
             Сеть барбершопов 

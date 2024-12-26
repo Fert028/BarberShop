@@ -1,7 +1,7 @@
 import s from "./Header.module.scss";
 import logo from "/assets/icons/logo.svg";
 import { NavButton } from "../NavButton/NavButton";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export const Header = () => {
   const routes = [
@@ -24,9 +24,9 @@ export const Header = () => {
 
   return (
     <header className={s.header}>
-      <NavLink to="/" className={s.logo__wrapper}>
+      <Link to="/" className={s.logo__wrapper}>
         <img src={logo} className={s.logo} />
-      </NavLink>
+      </Link>
       <nav className={s.nav}>
         {routes.map(el => (
           <NavButton key={el.id} path={el.path} text={el.text} />
